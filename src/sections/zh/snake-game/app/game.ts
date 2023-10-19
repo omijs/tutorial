@@ -36,7 +36,6 @@ class Game {
   }
 
   tick() {
-
     this.makeFood()
     const eating = this.eat()
     this.snake.move(eating)
