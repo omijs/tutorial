@@ -1,3 +1,3 @@
 # Snake Game
 
-The snake game is implemented using MVP architecture, and the UI layer is rendered using OMI.
+使用 MVP 架构实现的贪吃蛇，UI 层使用 OMI 渲染。

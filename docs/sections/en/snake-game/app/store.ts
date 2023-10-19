@@ -1,23 +1,17 @@
 import Game from './game'
-import { WeElement } from 'omi'
 import Snake from './snake'
-
+import { SignalValue, signal, bind } from 'omi'
 
 class Store {
   snake: Snake
   map: number[][]
   game: Game
-  data: { map: number[][], paused: boolean }
-  ui: {
-    game?: WeElement
-    index?: WeElement
-  }
-  ignoreAttrs: boolean
-
+  state: SignalValue<{ map: number[][], paused: boolean }>
+  
   constructor() {
     const game = new Game({
       onTick: () => {
-        this.ui.game.update()
+        this.state.update()
       }
     })
     const { snake, map } = game
@@ -25,50 +19,48 @@ class Store {
     this.map = map
     this.game = game
     game.start()
-
-    this.ui = {}
-
-    this.data = {
-      map,
-      paused: false
-
-    }
+    this.state = signal( { map: game.map, paused: false })
   }
 
-
-  turnUp = () => {
+  @bind
+  turnUp() {
     this.snake.turnUp()
   }
 
-  turnRight = () => {
+  @bind
+  turnRight() {
     this.snake.turnRight()
   }
 
-  turnDown = () => {
+  @bind
+  turnDown() {
     this.snake.turnDown()
   }
 
-  turnLeft = () => {
+  @bind
+  turnLeft() {
     this.snake.turnLeft()
   }
 
-  pauseOrPlay = () => {
+  @bind
+  pauseOrPlay() {
     if (this.game.paused) {
       this.game.play()
-      this.data.paused = false
+      this.state.value.paused = false
     } else {
       this.game.pause()
-      this.data.paused = true
+      this.state.value.paused = true
     }
-
-    this.ui.index.updateSelf()
+    this.state.update()
   }
 
-  reset = () => {
+  @bind
+  reset() {
     this.game.reset()
   }
 
-  toggleSpeed = () => {
+  @bind
+  toggleSpeed() {
     this.game.toggleSpeed()
   }
 }
