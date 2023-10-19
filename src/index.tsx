@@ -196,7 +196,7 @@ export default class extends WeElement {
   async loadSection(section) {
     this.section = section
     // 本地 debug：
-    const url = 'https://omi.cdn-go.cn/play/latest/sections/'
+    const url = 'https://omijs.github.io/tutorial/sections/'
     // const url = './sections/'
     showLoading()
     const urls = [
