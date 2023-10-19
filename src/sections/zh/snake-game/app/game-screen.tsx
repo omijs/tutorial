@@ -46,6 +46,7 @@ export default class extends Component {
     background: #879372;
     overflow: hidden;
   }`
+  
   render(props, store) {
     return (
       <div class="screen">
