@@ -23,7 +23,7 @@ static css = `
 其中 `fade` 为用户自定义的名称，你可以取任何名字，对应 `o-transition` 的 name:
 
 ```tsx
-<o-transition  name="fade"></o-transition>
+<o-transition name="fade"></o-transition>
 ```
 
 * fade-enter-from：定义进入过渡的开始状态
@@ -37,4 +37,4 @@ static css = `
 
 ## 源代码
 
-[→ @omiu/transition](https://github.com/Tencent/omi/blob/master/components/transition/src/index.tsx)
+[→ omi-transition](https://github.com/Tencent/omi/tree/master/packages/omi-transition)
