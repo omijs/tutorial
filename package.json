@@ -28,6 +28,7 @@
     "markdown-it-anchor": "^8.6.4",
     "omi": "^7.1.5",
     "omi-router": "^3.0.4",
+    "omi-transition": "^0.0.2",
     "omi-twind": "^0.0.2",
     "prismjs": "^1.28.0",
     "rollup": "^2.77.0",

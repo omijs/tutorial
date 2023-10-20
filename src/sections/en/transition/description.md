@@ -24,7 +24,7 @@ Where `fade` is a user-defined name, you can take any name, corresponding to the
 
 
 ```tsx
-<o-transition  name="fade"></o-transition>
+<o-transition name="fade"></o-transition>
 ```
 
 * fade-enter-from: defines the start state of entering the transition
@@ -38,6 +38,6 @@ Where `fade` is a user-defined name, you can take any name, corresponding to the
 
 ## Source code
 
-[→ @omiu/transition](https://github.com/Tencent/omi/blob/master/components/transition/src/index.tsx)
+[→ omi-transition](https://github.com/Tencent/omi/tree/master/packages/omi-transition)
 
 

@@ -1,5 +1,5 @@
 import { tag, render, h, WeElement } from 'omi'
-import Transition from '@omiu/transition'
+import 'omi-transition'
 
 @tag('my-app')
 class MyApp extends WeElement {
@@ -16,20 +16,10 @@ class MyApp extends WeElement {
     }`
 
   show = true
-  appear = true
   list = ['ItemA', 'ItemB', 'ItemC', 'ItemD', 'ItemE']
 
-  transition: Transition
-
   toggle = () => {
-    this.show = true
-    this.appear = !this.appear
-    this.update()
-    this.transition.toggle()
-  }
-
-  onAfterLeave = () => {
-    this.show = false
+    this.show = !this.show
     this.update()
   }
 
@@ -38,15 +28,14 @@ class MyApp extends WeElement {
       <>
         <button onClick={this.toggle}>Toggle</button>
 
-        <o-transition onAfterLeave={this.onAfterLeave} ref={e => this.transition = e} appear name="fade">
-          {this.show && <h4>OMI</h4>}
+        <o-transition show={this.show} name="fade">
+          <h4>OMI</h4>
         </o-transition>
 
         <ul>
           {this.list.map((item, index) => (
             <o-transition
-              appear={this.appear}
-              disappear={!this.appear}
+              show={this.show}
               name='fade'
               delay={(index + 1) * 300}>
               <li>{item}</li>
