@@ -47,6 +47,30 @@ Because it is a standard custom element, you can directly use the DOM API to ach
 document.body.appendChild(document.creatElement('hello-omi'))
 ```
 
+## Define Stateful Application
+
+```tsx
+import { tag, Component, h, render, signal } from 'omi'
+
+const count = signal(0)
+
+@tag('hello-omi')
+class HelloOmi extends Component {
+  render(props) {
+    return (
+      <>
+        <h1>Hello {props.msg}!</h1>
+        {count.value}<button onClick={()=>count.value++}>+</button>
+      </>
+    )
+  }
+}
+
+render(<hello-omi msg='Omi' />, 'body')
+```
+
+The change of `count.value` will automatically update the component.
+
 Congratulations on getting started!
 
 

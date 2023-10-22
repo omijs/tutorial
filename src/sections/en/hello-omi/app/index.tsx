@@ -1,12 +1,15 @@
-import { tag, Component, h, render } from 'omi'
+import { tag, Component, h, render, signal } from 'omi'
+
+const count = signal(0)
 
 @tag('hello-omi')
 class HelloOmi extends Component {
   render(props) {
     return (
-      <div id="app">
+      <>
         <h1>Hello {props.msg}!</h1>
-      </div>
+        {count.value}<button onClick={() => count.value++}>+</button>
+      </>
     )
   }
 }

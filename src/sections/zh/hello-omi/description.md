@@ -47,4 +47,28 @@ render(<hello-omi msg='Omi' />, 'body')
 document.body.appendChild(document.creatElement('hello-omi'))
 ```
 
+## 定义有状态的应用
+
+```tsx
+import { tag, Component, h, render, signal } from 'omi'
+
+const count = signal(0)
+
+@tag('hello-omi')
+class HelloOmi extends Component {
+  render(props) {
+    return (
+      <>
+        <h1>Hello {props.msg}!</h1>
+        {count.value}<button onClick={()=>count.value++}>+</button>
+      </>
+    )
+  }
+}
+
+render(<hello-omi msg='Omi' />, 'body')
+```
+
+其中 `count.value` 的变更会自动更新组件。
+
 恭喜你入门了！
