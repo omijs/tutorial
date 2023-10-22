@@ -27,6 +27,8 @@ import '@omiu/icon/esm/translate'
 interface TreeItem {
   id?: string
   label: string
+  target?: string
+  href?: string
   expanded?: boolean
   files?: string[]
   codePanelHeight?: string
