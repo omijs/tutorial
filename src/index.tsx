@@ -116,7 +116,7 @@ export default class extends Component {
     }, {
       id: 'bubble-sort',
       label: 'Bubble Sort',
-      files: ['index.tsx', 'store.ts', 'index.css'],
+      files: ['index.tsx'],
     }, {
       id: 'clock',
       label: 'Clock',
