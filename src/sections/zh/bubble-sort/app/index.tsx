@@ -114,7 +114,7 @@ class MyElement extends Component {
         </div>
 
         <button disabled={state.value.sorting} onClick={this.store?.sort}>开始冒泡排序</button>
-        <button style="margin-left: 5px" disabled={state.value.sorting} onClick={this.store?.reset}>重制</button>
+        <button style="margin-left: 5px" disabled={state.value.sorting} onClick={this.store?.reset}>重置</button>
       </div>
     )
   }
