@@ -5,10 +5,10 @@
 ## 定义 Counter 组件
 
 ```tsx
-import { tag, WeElement, h } from 'omi'
+import { tag, Component, h } from 'omi'
 
 @tag('my-counter')
-class MyCounter extends WeElement {
+class MyCounter extends Component {
   static css = `
     span{
         color: red;
@@ -55,7 +55,7 @@ render((
 ## 给 Counter 属性初始值
 
 ```tsx
-class MyCounter extends WeElement {
+class MyCounter extends Component {
   install () {
     this.count = this.props.count
   }

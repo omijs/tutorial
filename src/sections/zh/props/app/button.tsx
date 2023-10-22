@@ -1,4 +1,4 @@
-import { tag, WeElement, h, extractClass, OmiProps } from 'omi'
+import { tag, Component, h, extractClass, OmiProps } from 'omi'
 import css from './button.css'
 
 export interface Props {
@@ -17,7 +17,7 @@ export interface Props {
 }
 
 @tag('o-button')
-class Button extends WeElement<Props> {
+class Button extends Component<Props> {
   static css = css
 
   static defaultProps = {

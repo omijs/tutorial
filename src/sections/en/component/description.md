@@ -5,10 +5,10 @@ In this section, you will learn the definition and use of components.
 ## Define Counter Component
 
 ```tsx
-import { tag, WeElement, h } from 'omi'
+import { tag, Component, h } from 'omi'
 
 @tag('my-counter')
-class MyCounter extends WeElement {
+class MyCounter extends Component {
   static css = `
     span{
         color: red;
@@ -55,7 +55,7 @@ render((
 ## Initial prop value of counter
 
 ```tsx
-class MyCounter extends WeElement {
+class MyCounter extends Component {
   install () {
     this.count = this.props.count
   }

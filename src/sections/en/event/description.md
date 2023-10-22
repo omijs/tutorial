@@ -17,7 +17,7 @@ onClick = (evt) => {
 The complete code is as follows:
 
 ```jsx
-define('my-element', class extends WeElement {
+define('my-element', class extends Component {
   onClick = (evt) => {
     alert('Hello Omi!')
   }
@@ -33,7 +33,7 @@ define('my-element', class extends WeElement {
 ### Custom Event
 
 ```jsx
-define('my-element', class extends WeElement {
+define('my-element', class extends Component {
   onClick = (evt) => {
     this.fire('my-event', { name: 'abc' })
   }

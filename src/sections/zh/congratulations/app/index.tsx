@@ -1,7 +1,7 @@
-import { tag, render, h, WeElement } from 'omi'
+import { tag, render, h, Component } from 'omi'
 
 @tag('my-element')
-class MyElement extends WeElement {
+class MyElement extends Component {
   static css = `
     h1{
       text-align: center;

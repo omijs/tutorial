@@ -17,7 +17,7 @@ onClick = (evt) => {
 完整的代码如下所示:
 
 ```jsx
-define('my-element', class extends WeElement {
+define('my-element', class extends Component {
   onClick = (evt) => {
     alert('Hello Omi!')
   }
@@ -33,7 +33,7 @@ define('my-element', class extends WeElement {
 ### Custom Event
 
 ```jsx
-define('my-element', class extends WeElement {
+define('my-element', class extends Component {
   onClick = (evt) => {
     this.fire('my-event', { name: 'abc' })
   }

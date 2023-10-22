@@ -1,9 +1,9 @@
-import { tag, render, h, WeElement, classNames } from 'omi'
+import { tag, render, h, Component, classNames } from 'omi'
 import Store from './store'
 import css from './index.css'
 
 @tag('my-element')
-class MyElement extends WeElement {
+class MyElement extends Component {
   static css = css
 
   store: Store

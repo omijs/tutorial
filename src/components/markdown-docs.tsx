@@ -1,4 +1,4 @@
-import { WeElement, h, tag } from 'omi'
+import { Component, h, tag } from 'omi'
 import * as MarkdownIt from 'markdown-it'
 import prismCSS from './prism.css'
 import mdCSS from './md.css'
@@ -32,7 +32,7 @@ declare global {
 }
 
 @tag(tagName)
-export default class extends WeElement<Props> {
+export default class extends Component<Props> {
   static css = [mdCSS, prismCSS]
 
   static defaultProps = {

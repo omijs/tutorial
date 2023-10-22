@@ -1,4 +1,4 @@
-import { WeElement } from 'omi'
+import { Component } from 'omi'
 
 export default class Store {
   constructor() {
@@ -7,7 +7,7 @@ export default class Store {
 
   data
 
-  ui: WeElement
+  ui: Component
 
   init() {
     this.data = {

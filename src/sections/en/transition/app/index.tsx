@@ -1,8 +1,8 @@
-import { tag, render, h, WeElement } from 'omi'
+import { tag, render, h, Component } from 'omi'
 import 'omi-transition'
 
 @tag('my-app')
-class MyApp extends WeElement {
+class MyApp extends Component {
   static css = `
     .fade-leave-to,
     .fade-enter-from {

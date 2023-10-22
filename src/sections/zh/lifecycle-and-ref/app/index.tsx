@@ -1,7 +1,7 @@
-import { tag, render, h, WeElement } from 'omi'
+import { tag, render, h, Component } from 'omi'
 
 @tag('hello-omi')
-class HelloOmi extends WeElement {
+class HelloOmi extends Component {
   h1: HTMLElement
 
   installed() {

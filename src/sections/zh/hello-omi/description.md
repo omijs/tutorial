@@ -13,7 +13,7 @@
 从 omi 导入依赖:
 
 ```tsx
-import { tag, render, h, WeElement } from 'omi'
+import { tag, render, h, Component } from 'omi'
 ```
 
 声明自定义元素标签名称:
@@ -25,7 +25,7 @@ import { tag, render, h, WeElement } from 'omi'
 定义自定义元素:
 
 ```tsx
-class HelloOmi extends WeElement {
+class HelloOmi extends Component {
   render(props) {
     return (
       <div id="app">

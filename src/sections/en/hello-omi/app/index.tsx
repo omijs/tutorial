@@ -1,7 +1,7 @@
-import { tag, WeElement, h, render } from 'omi'
+import { tag, Component, h, render } from 'omi'
 
 @tag('hello-omi')
-class HelloOmi extends WeElement {
+class HelloOmi extends Component {
   render(props) {
     return (
       <div id="app">

@@ -13,7 +13,7 @@ This tutorial assumes that you are basically familiar with HTML, CSS, javascript
 Import dependencies from omi:
 
 ```tsx
-import { tag, render, h, WeElement } from 'omi'
+import { tag, render, h, Component } from 'omi'
 ```
 
 Declare custom element label name:
@@ -25,7 +25,7 @@ Declare custom element label name:
 Define custom element:
 
 ```tsx
-class HelloOmi extends WeElement {
+class HelloOmi extends Component {
   render(props) {
     return (
       <div id="app">

@@ -6,10 +6,10 @@ This is an example of rendering SVG.
 ## Circle
 
 ```tsx
-import { tag, render, h, WeElement } from 'omi'
+import { tag, render, h, Component } from 'omi'
 
 @tag('my-clock')
-class MyClock extends WeElement {
+class MyClock extends Component {
   static css = `
   svg {
     width: 200px;

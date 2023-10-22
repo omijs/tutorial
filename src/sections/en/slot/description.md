@@ -5,10 +5,10 @@ The HTML <slot> element, as part of the web components technology suite, is a pl
 ## Usage 
 
 ```tsx
-import { tag, WeElement, render, h } from 'omi'
+import { tag, Component, render, h } from 'omi'
 
 @tag('my-element')
-class MyElement extends WeElement 
+class MyElement extends Component 
   render() {
     return (
       <div>
@@ -57,10 +57,10 @@ The slot with the name attribute is called a named slot. You can select a specif
 For example, try to transform the example of this article into the following code:
 
 ```tsx
-import { tag, WeElement, render, h } from 'omi'
+import { tag, Component, render, h } from 'omi'
 
 @tag('my-element')
-class MyElement extends WeElement {
+class MyElement extends Component {
   static css = `
     ::slotted(.a) {
       border: 1px solid #07c160;

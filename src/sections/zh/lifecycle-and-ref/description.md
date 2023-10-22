@@ -14,9 +14,9 @@
 举个例子:
 
 ```js
-import { render, WeElement, define } from 'omi'
+import { render, Component, define } from 'omi'
 
-define('my-timer', class extends WeElement {
+define('my-timer', class extends Component {
   data = {
     seconds: 0
   }
@@ -45,7 +45,7 @@ render(<my-timer />, 'body')
 ## Ref
 
 ```jsx
-define('my-element', class extends WeElement {
+define('my-element', class extends Component {
   onClick = (evt) => {
     console.log(this.h1)
   }
@@ -68,7 +68,7 @@ define('my-element', class extends WeElement {
 ### 提前赋值
 
 ```jsx
-define('my-element', class extends WeElement {
+define('my-element', class extends Component {
   onClick = (evt) => {
     console.log(this.h1)
   }
@@ -90,7 +90,7 @@ define('my-element', class extends WeElement {
 你也可以使用 `createRef` 来得到更高的性能:
 
 ```jsx
-define('my-element', class extends WeElement {
+define('my-element', class extends Component {
   onClick = (evt) => {
     console.log(this.myRef.current)  //h1
   }

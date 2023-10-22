@@ -3,9 +3,9 @@
 JSX/TSX is the best UI expression with the least grammatical noise, the strongest expressive ability and Turing complete. The template engine is not complete, the template string is Turing complete, but the grammatical noise is too big. 
 
 ```jsx
-import { WeElement, h } from 'omi'
+import { Component, h } from 'omi'
 
-class Test extends WeElement {
+class Test extends Component {
 
   render() {
     return (
@@ -38,7 +38,7 @@ Variables or expressions, or JS statement blocks, are wrapped in single parenthe
 Try it in Omi's render method:
 
 ```jsx
-define('my-element', class extends WeElement {
+define('my-element', class extends Component {
   render(props) {
     return <h1>{props.name}</h1>
   }
@@ -120,9 +120,9 @@ If it's a `{}'package, you need `return'. If you need an index:
 Here is a ninety-nine multiplication table:
 
 ```jsx
-import { define, render, WeElement } from 'omi'
+import { define, render, Component } from 'omi'
 
-define('my-app', class extends WeElement {
+define('my-app', class extends Component {
 
   static css = `span{
     display: inline-block;

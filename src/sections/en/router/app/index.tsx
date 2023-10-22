@@ -1,8 +1,8 @@
-import { tag, render, h, WeElement } from 'omi'
+import { tag, render, h, Component } from 'omi'
 import 'omi-router'
 
 @tag('user-detail')
-class UserDetail extends WeElement {
+class UserDetail extends Component {
   render(props) {
     return (
       <div>
@@ -15,7 +15,7 @@ class UserDetail extends WeElement {
 }
 
 @tag('home-page')
-class HomePage extends WeElement {
+class HomePage extends Component {
   render() {
     return (
       <div>
@@ -34,7 +34,7 @@ declare global {
 const route = window.route
 
 @tag('my-app')
-class MyApp extends WeElement {
+class MyApp extends Component {
   data = { tag: 'my-home' }
 
   $route

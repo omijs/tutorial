@@ -3,9 +3,9 @@
 通过 Props 向子组件传递数据，比如：
 
 ```jsx
-import { WeElement, define, render } from 'omi'
+import { Component, define, render } from 'omi'
 
-define('my-element', class extends WeElement {
+define('my-element', class extends Component {
   render(props) {
     return (
       <h1>Hello, {props.name}!</h1>
@@ -23,7 +23,7 @@ define('my-element', class extends WeElement {
 你也可以传任意类型的数据给 props:
 
 ```jsx
-define('my-element', class extends WeElement {
+define('my-element', class extends Component {
   render(props) {
     return (
       <h1>Hello, {props.myObj.name}!</h1>
@@ -41,7 +41,7 @@ define('my-element', class extends WeElement {
 你可以通过静态属性 `static defaultProps` 来设置默认值，使用 `static propTypes` 来设置类型:
 
 ```jsx
-define('my-element', class extends WeElement {
+define('my-element', class extends Component {
   static defaultProps = {
 		name: 'Omi',
 		myAge: 18
@@ -73,7 +73,7 @@ define('my-element', class extends WeElement {
 这里介绍一次性使用 prop 的技巧:
 
 ```jsx
-define('my-element', class extends WeElement {
+define('my-element', class extends Component {
   install() {
     this.name = this.props.name
   }

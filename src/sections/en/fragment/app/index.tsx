@@ -1,7 +1,7 @@
-import { tag, WeElement, render, h } from 'omi'
+import { tag, Component, render, h } from 'omi'
 
 @tag('my-counter')
-class MyCounter extends WeElement {
+class MyCounter extends Component {
   static css = `
     span {
       color: red;

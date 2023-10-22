@@ -14,9 +14,9 @@
 For example:
 
 ```js
-import { render, WeElement, define } from 'omi'
+import { render, Component, define } from 'omi'
 
-define('my-timer', class extends WeElement {
+define('my-timer', class extends Component {
   data = {
     seconds: 0
   }
@@ -45,7 +45,7 @@ render(<my-timer />, 'body')
 ## Ref
 
 ```jsx
-define('my-element', class extends WeElement {
+define('my-element', class extends Component {
   onClick = (evt) => {
     console.log(this.h1)
   }
@@ -68,7 +68,7 @@ Add `ref = {e => {this. anyNameYouWant = e} ` to the element, and then you can a
 ### Assignment ahead of time
 
 ```jsx
-define('my-element', class extends WeElement {
+define('my-element', class extends Component {
   onClick = (evt) => {
     console.log(this.h1)
   }
@@ -88,7 +88,7 @@ define('my-element', class extends WeElement {
 ### createRef
 
 ```jsx
-define('my-element', class extends WeElement {
+define('my-element', class extends Component {
   onClick = (evt) => {
     console.log(this.myRef.current)  //h1
   }

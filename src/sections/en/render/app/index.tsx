@@ -1,8 +1,8 @@
-import { tag, render, WeElement } from 'omi'
+import { tag, render, Component } from 'omi'
 import css from './index.css'
 
 @tag('my-app')
-class MyApp extends WeElement {
+class MyApp extends Component {
   static css = css
 
   render(props) {

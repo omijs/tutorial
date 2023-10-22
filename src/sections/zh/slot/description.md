@@ -5,10 +5,10 @@ HTML <slot> 元素 ，作为 Web Components 技术套件的一部分，是 Web �
 ## 使用 
 
 ```tsx
-import { tag, WeElement, render, h } from 'omi'
+import { tag, Component, render, h } from 'omi'
 
 @tag('my-element')
-class MyElement extends WeElement 
+class MyElement extends Component 
   render() {
     return (
       <div>
@@ -57,10 +57,10 @@ static css = `
 比如试试改造一下本文的例子为下面的代码：
 
 ```tsx
-import { tag, WeElement, render, h } from 'omi'
+import { tag, Component, render, h } from 'omi'
 
 @tag('my-element')
-class MyElement extends WeElement {
+class MyElement extends Component {
   static css = `
     ::slotted(.a) {
       border: 1px solid #07c160;

@@ -28,13 +28,13 @@ npm install omi-router
 
 ```js
 import { route } from 'omi-router'
-import { define, WeElement, render } from 'omi'
+import { define, Component, render } from 'omi'
 import './about'
 import './home'
 import './user'
 import './user-list'
 
-define('my-app', class extends WeElement {
+define('my-app', class extends Component {
 
   data = { tag: 'my-home' }
 

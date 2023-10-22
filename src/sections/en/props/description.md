@@ -3,9 +3,9 @@
 Transfer data to sub elements through props, such as:
 
 ```jsx
-import { WeElement, define, render } from 'omi'
+import { Component, define, render } from 'omi'
 
-define('my-element', class extends WeElement {
+define('my-element', class extends Component {
   render(props) {
     return (
       <h1>Hello, {props.name}!</h1>
@@ -23,7 +23,7 @@ Using element:
 You can also pass any type of data to props:
 
 ```jsx
-define('my-element', class extends WeElement {
+define('my-element', class extends Component {
   render(props) {
     return (
       <h1>Hello, {props.myObj.name}!</h1>
@@ -41,7 +41,7 @@ Using element:
 You can set the default value by the `static defaultProps` property，use `static propTypes` to set the type:
 
 ```jsx
-define('my-element', class extends WeElement {
+define('my-element', class extends Component {
   static defaultProps = {
     name: 'Omi',
     myAge: 18
@@ -71,7 +71,7 @@ Special attention should be paid to adding `static propTypes` if your custom ele
 ### Once Props
 
 ```jsx
-define('my-element', class extends WeElement {
+define('my-element', class extends Component {
   install() {
     this.name = this.props.name
   }

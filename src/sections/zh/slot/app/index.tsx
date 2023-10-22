@@ -1,7 +1,7 @@
-import { tag, WeElement, render, h } from 'omi'
+import { tag, Component, render, h } from 'omi'
 
 @tag('my-element')
-class MyElement extends WeElement {
+class MyElement extends Component {
   static css = `
     ::slotted(*) {
       border: 1px solid #07c160;

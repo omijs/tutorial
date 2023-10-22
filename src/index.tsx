@@ -1,4 +1,4 @@
-import { WeElement, render, h, tag } from 'omi'
+import { Component, render, h, tag } from 'omi'
 import './assets/index.css'
 import logo from './assets/logo.svg'
 import { tw, sheet } from 'omi-twind'
@@ -44,7 +44,7 @@ declare global {
 }
 
 @tag('my-app')
-export default class extends WeElement {
+export default class extends Component {
   static css = sheet.target
 
   onCountChanged = (evt: CustomEvent) => {
@@ -303,8 +303,8 @@ export default class extends WeElement {
 
   $mainPanel: HTMLElement
   $mdPanel: HTMLElement
-  $translate: WeElement
-  $tip: WeElement
+  $translate: Component
+  $tip: Component
 
 
   render() {

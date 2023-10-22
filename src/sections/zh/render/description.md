@@ -22,7 +22,7 @@ const element = <h1>Hello, world!</h1>
 
 ```tsx
 @tag('my-element')
-class MyElement extends WeElement {
+class MyElement extends Component {
   render(props) {
     return <h1>{props.name}</h1>
   }
@@ -39,7 +39,7 @@ class MyElement extends WeElement {
 
 ```tsx
 @tag('my-app')
-class MyElement extends WeElement {
+class MyElement extends Component {
   name = 'omi'
 
   render(props) {
@@ -117,9 +117,9 @@ JSX 渲染:
 这里举一个九九乘法表:
 
 ```jsx
-import { define, render, WeElement } from 'omi'
+import { define, render, Component } from 'omi'
 
-define('my-app', class extends WeElement {
+define('my-app', class extends Component {
 
   static css = `span{
     display: inline-block;

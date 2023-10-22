@@ -1,8 +1,8 @@
-import { tag, render, h, WeElement } from 'omi'
+import { tag, render, h, Component } from 'omi'
 import css from './index.css'
 
 @tag('my-clock')
-class MyClock extends WeElement {
+class MyClock extends Component {
   static css = css
 
   install() {

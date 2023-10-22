@@ -1,7 +1,7 @@
-import { tag, render, WeElement } from 'omi'
+import { tag, render, Component } from 'omi'
 
 @tag('my-element')
-class MyElement extends WeElement {
+class MyElement extends Component {
   count = 0
 
   onClick = () => {
@@ -21,7 +21,7 @@ class MyElement extends WeElement {
 }
 
 @tag('my-app')
-class MyApp extends WeElement {
+class MyApp extends Component {
   evtDetail: number
 
   onCountChanged = (evt) => {

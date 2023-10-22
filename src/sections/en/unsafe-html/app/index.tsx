@@ -1,9 +1,9 @@
-import { tag, render, h, WeElement } from 'omi'
+import { tag, render, h, Component } from 'omi'
 
 const markup = '<h3>Some HTML to render.</h3>'
 
 @tag('my-element')
-class MyElement extends WeElement {
+class MyElement extends Component {
   render() {
     return <div unsafeHTML={{ html: markup }}></div>
   }

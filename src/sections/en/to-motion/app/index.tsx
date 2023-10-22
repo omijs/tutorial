@@ -1,7 +1,7 @@
-import { tag, render, h, WeElement } from 'omi'
+import { tag, render, h, Component } from 'omi'
 
 @tag('my-app')
-class MyApp extends WeElement {
+class MyApp extends Component {
   number = 2
   from = this.number
   to = this.number
