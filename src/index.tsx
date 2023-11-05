@@ -413,7 +413,4 @@ export default class extends Component {
 
 // 清空 loading
 document.querySelector('#root').innerHTML = ''
-render(<my-app></my-app>, '#root', {
-  // if using OMI to build the whole application, ignore the attributs of DOM and use props of virtual dom
-  ignoreAttrs: true
-})
+render(<my-app></my-app>, '#root')
