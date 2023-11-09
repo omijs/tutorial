@@ -110,10 +110,12 @@ export default class extends Component {
       label: '🔗Router',
       target: '_blank',
       href: 'https://codesandbox.io/p/github/omijs/omi-router-example/main?file=%2Fsrc%2Froutes.tsx'
-    }, {
-      id: 'transition',
-      label: 'Transition',
-    }, {
+    }, 
+    // {
+    //   id: 'transition',
+    //   label: 'Transition',
+    // }, 
+    {
       id: 'bubble-sort',
       label: 'Bubble Sort',
       files: ['index.tsx'],
