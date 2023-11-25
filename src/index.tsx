@@ -17,12 +17,12 @@ import { rollupBuild } from './rollup-build'
 import '@omiu/popover'
 // todo, 兼容 omi-next
 import '@omiu/link'
-import '@omiu/icon/navigate-before'
-import '@omiu/icon/navigate-next'
+import '@omiu/icon/esm/navigate-before'
+import '@omiu/icon/esm/navigate-next'
 import '@omiu/tabs'
 import '@omiu/tree'
-import '@omiu/icon/git-hub'
-import '@omiu/icon/translate'
+import '@omiu/icon/esm/git-hub'
+import '@omiu/icon/esm/translate'
 
 interface TreeItem {
   id?: string
