@@ -7,7 +7,7 @@ import './components/markdown-docs'
 import { EditorView, basicSetup } from "codemirror"
 import { javascript } from "@codemirror/lang-javascript"
 // import { css } from "@codemirror/lang-css"
-import { route } from 'omi-router'
+import { route } from 'rspa'
 // todo, 兼容 omi-next
 import { showLoading, hideLoading } from '@omiu/toast'
 import { files } from './files'
