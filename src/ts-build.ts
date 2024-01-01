@@ -1,4 +1,4 @@
-import * as ts from "typescript"
+import * as ts from 'typescript'
 
 export function tsBuild(code) {
   return ts.transpileModule(code, {
@@ -8,7 +8,6 @@ export function tsBuild(code) {
       jsx: ts.JsxEmit.React,
       jsxFactory: 'h',
       jsxFragmentFactory: 'h.f',
-    }
+    },
   }).outputText
 }
-

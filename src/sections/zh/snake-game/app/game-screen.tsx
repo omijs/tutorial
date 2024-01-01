@@ -2,7 +2,6 @@ import { Component, h, tag } from 'omi'
 
 @tag('game-screen')
 export default class extends Component {
-
   static css = `
   .screen {
     border: 1px solid #000;
@@ -46,22 +45,23 @@ export default class extends Component {
     background: #879372;
     overflow: hidden;
   }`
-  
+
   render(props, store) {
     return (
       <div class="screen">
-        {store.state.value.map.map(row => {
-          return <p>
-            {row.map(col => {
-              if (col) {
-                return <b class='s'></b>
-              }
-              return <b></b>
-            })}
-          </p>
+        {store.state.value.map.map((row) => {
+          return (
+            <p>
+              {row.map((col) => {
+                if (col) {
+                  return <b class="s"></b>
+                }
+                return <b></b>
+              })}
+            </p>
+          )
         })}
       </div>
     )
   }
 }
-

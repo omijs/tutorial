@@ -14,7 +14,7 @@ export default class Store {
       arr: Array.from({ length: 30 }, () => this.randomInt()),
       indexA: -1,
       indexB: -1,
-      sorting: false
+      sorting: false,
     }
   }
 
@@ -40,7 +40,7 @@ export default class Store {
         this.data.indexA = indexA
         this.data.indexB = indexB
         this.ui.update()
-      }
+      },
     })
   }
 }
@@ -65,9 +65,9 @@ async function bubbleSort(arr, options) {
 }
 
 function swap(arr, indexA, indexB) {
-  return new Promise(resolve => {
+  return new Promise((resolve) => {
     setTimeout(() => {
-      const temp = arr[indexA];
+      const temp = arr[indexA]
       arr[indexA] = arr[indexB]
       arr[indexB] = temp
       resolve(true)

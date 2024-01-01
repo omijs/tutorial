@@ -8,15 +8,19 @@ class MyApp extends Component {
   render(props) {
     return (
       <div>
-        {props.numbers.map((a, indexA) =>
+        {props.numbers.map((a, indexA) => (
           <div>
-            {
-              props.numbers.map((b, indexB) => {
-                return indexA <= indexB && <span>{a}*{b}={a * b} </span>
-              })
-            }
+            {props.numbers.map((b, indexB) => {
+              return (
+                indexA <= indexB && (
+                  <span>
+                    {a}*{b}={a * b}{' '}
+                  </span>
+                )
+              )
+            })}
           </div>
-        )}
+        ))}
       </div>
     )
   }

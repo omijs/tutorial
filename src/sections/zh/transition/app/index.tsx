@@ -34,10 +34,7 @@ class MyApp extends Component {
 
         <ul>
           {this.list.map((item, index) => (
-            <o-transition
-              show={this.show}
-              name='fade'
-              delay={(index + 1) * 300}>
+            <o-transition show={this.show} name="fade" delay={(index + 1) * 300}>
               <li>{item}</li>
             </o-transition>
           ))}

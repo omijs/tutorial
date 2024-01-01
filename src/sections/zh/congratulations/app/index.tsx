@@ -51,7 +51,7 @@ class MyElement extends Component {
         vy: -2 + Math.random() * -5,
         r: 2 + 2 * Math.random(),
         opacity: 1,
-        color: this.randomColor()
+        color: this.randomColor(),
       })
     }
   }
@@ -69,9 +69,9 @@ class MyElement extends Component {
       particle.y += particle.vy
       this.ctx.fillStyle = particle.color
       this.ctx.globalAlpha = particle.opacity
-      this.ctx.beginPath();
-      this.ctx.arc(particle.x, particle.y, particle.r, 0, 2 * Math.PI);
-      this.ctx.fill();
+      this.ctx.beginPath()
+      this.ctx.arc(particle.x, particle.y, particle.r, 0, 2 * Math.PI)
+      this.ctx.fill()
     })
     this.ctx.restore()
   }
@@ -90,12 +90,14 @@ class MyElement extends Component {
   render() {
     return (
       <div>
-        <h1 ref={e => this.h1 = e} onClick={this.onClick}>🎉 Congratulations!</h1>
+        <h1 ref={(e) => (this.h1 = e)} onClick={this.onClick}>
+          🎉 Congratulations!
+        </h1>
         <canvas
-          ref={e => this.canvas = e}
+          ref={(e) => (this.canvas = e)}
           width={window.innerWidth}
-          height={window.innerHeight}>
-        </canvas>
+          height={window.innerHeight}
+        ></canvas>
       </div>
     )
   }

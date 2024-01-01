@@ -12,6 +12,6 @@ export function vfilePlugin(files) {
         return files[id] // the source code for "virtual-module"
       }
       return null // other ids should be handled as usually
-    }
+    },
   }
 }

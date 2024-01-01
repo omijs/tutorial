@@ -6,20 +6,20 @@ class Store {
   snake: Snake
   map: number[][]
   game: Game
-  state: SignalValue<{ map: number[][], paused: boolean }>
-  
+  state: SignalValue<{ map: number[][]; paused: boolean }>
+
   constructor() {
     const game = new Game({
       onTick: () => {
         this.state.update()
-      }
+      },
     })
     const { snake, map } = game
     this.snake = snake
     this.map = map
     this.game = game
     game.start()
-    this.state = signal( { map: game.map, paused: false })
+    this.state = signal({ map: game.map, paused: false })
   }
 
   @bind
@@ -65,4 +65,4 @@ class Store {
   }
 }
 
-export default new Store
+export default new Store()

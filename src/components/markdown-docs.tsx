@@ -37,8 +37,7 @@ export default class extends Component<Props> {
 
   static defaultProps = {
     mdContent: '',
-    padding: 0
-
+    padding: 0,
   }
 
   md
@@ -47,7 +46,7 @@ export default class extends Component<Props> {
     // @ts-ignore
     this.md = new MdIt().use(anchor.default, {
       level: 2,
-      permalink: true
+      permalink: true,
     })
   }
 
@@ -91,8 +90,8 @@ export default class extends Component<Props> {
   render() {
     return (
       <div class="result-html" style={{ padding: this.props.padding }}>
-        <div unsafeHTML={this.md.render(this.props.mdContent)}></div >
-      </div >
+        <div unsafeHTML={this.md.render(this.props.mdContent)}></div>
+      </div>
     )
   }
 }

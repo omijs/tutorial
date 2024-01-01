@@ -17,9 +17,10 @@ class MyElement extends Component {
   }
 }
 
-render((
+render(
   <my-element>
     <p>One</p>
     <p>Two</p>
-  </my-element>
-), 'body')
+  </my-element>,
+  'body'
+)

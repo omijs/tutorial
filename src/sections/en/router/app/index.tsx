@@ -17,11 +17,7 @@ class UserDetail extends Component {
 @tag('home-page')
 class HomePage extends Component {
   render() {
-    return (
-      <div>
-        home-page
-      </div>
-    )
+    return <div>home-page</div>
   }
 }
 
@@ -40,7 +36,6 @@ class MyApp extends Component {
   $route
 
   install() {
-
     route('/', () => {
       this.data.tag = 'home-page'
       this.update()
@@ -76,13 +71,21 @@ class MyApp extends Component {
     return (
       <div>
         <ul>
-          <li><a href="#/" >Home(href=#/)</a></li>
-          <li><a href="#/user/dntzhang/category/omi?age=18" >User(href=#/user/dntzhang/category/omi?age=18)</a></li>
+          <li>
+            <a href="#/">Home(href=#/)</a>
+          </li>
+          <li>
+            <a href="#/user/dntzhang/category/omi?age=18">
+              User(href=#/user/dntzhang/category/omi?age=18)
+            </a>
+          </li>
         </ul>
         <div id="view">
           <data.tag $route={this.$route} />
         </div>
-        <div><button onClick={this.onClick}>route.to('/user/lucy/category/html?a=1')</button></div>
+        <div>
+          <button onClick={this.onClick}>route.to('/user/lucy/category/html?a=1')</button>
+        </div>
       </div>
     )
   }

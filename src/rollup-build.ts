@@ -1,5 +1,5 @@
 import { vfilePlugin } from './rollup-plugin-vfile'
-import { rollup } from 'rollup';
+import { rollup } from 'rollup'
 import { files } from './files'
 import { cssStringPlugin } from './rollup-plugin-css'
 
@@ -8,16 +8,17 @@ const inputOptions = {
   input: './index', // resolved by our plugin
   plugins: [vfilePlugin(files), cssStringPlugin()],
   // 不需要 tree shaking
-  treeshake: false
+  treeshake: false,
 }
 
 // you can create multiple outputs from the same input to generate e.g.
 // different formats like CommonJS and ESM
-const outputOptionsList = [{
-  file: 'bundle.js',
-  format: 'umd' //es
-}]
-
+const outputOptionsList = [
+  {
+    file: 'bundle.js',
+    format: 'umd', //es
+  },
+]
 
 export async function rollupBuild(callback) {
   if (!files['./index']) {
@@ -28,13 +29,12 @@ export async function rollupBuild(callback) {
   try {
     // create a bundle
     // @ts-ignore
-    bundle = await rollup(inputOptions);
+    bundle = await rollup(inputOptions)
 
     // an array of file names this bundle depends on
     const output = await generateOutputs(bundle)
     callback(output[0].code)
   } catch (error) {
-
     // do some error reporting
     console.error(error)
   }

@@ -35,7 +35,6 @@ class MyApp extends Component {
         <div>evt.detail: {this.evtDetail}</div>
         <my-element onCountChanged={this.onCountChanged}></my-element>
       </>
-
     )
   }
 }

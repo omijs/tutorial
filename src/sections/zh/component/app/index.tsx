@@ -1,9 +1,10 @@
 import { render, h } from 'omi'
 import './my-counter'
 
-render((
+render(
   <div>
     <div>组件 Demo</div>
     <my-counter />
-  </div>
-), 'body')
+  </div>,
+  'body'
+)

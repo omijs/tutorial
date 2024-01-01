@@ -11,7 +11,7 @@ class HelloOmi extends Component {
   render(props) {
     return (
       <div id="app">
-        <h1 ref={e => this.h1 = e}>Can't see me!</h1>
+        <h1 ref={(e) => (this.h1 = e)}>Can't see me!</h1>
       </div>
     )
   }

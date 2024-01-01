@@ -8,10 +8,11 @@ class HelloOmi extends Component {
     return (
       <>
         <h1>Hello {props.msg}!</h1>
-        {count.value}<button onClick={() => count.value++}>+</button>
+        {count.value}
+        <button onClick={() => count.value++}>+</button>
       </>
     )
   }
 }
 
-render(<hello-omi msg='Omi' />, 'body')
+render(<hello-omi msg="Omi" />, 'body')

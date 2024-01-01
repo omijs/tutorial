@@ -6,9 +6,11 @@ class HelloOmi extends Component {
 
   render(props) {
     return (
-      <p>Hello, <span>{props.msg}</span>!</p>
+      <p>
+        Hello, <span>{props.msg}</span>!
+      </p>
     )
   }
 }
 
-render(<hello-omi msg='Omi' />, 'body')
+render(<hello-omi msg="Omi" />, 'body')

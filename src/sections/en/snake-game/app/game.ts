@@ -23,8 +23,7 @@ class Game {
 
   onTick: () => void
   init() {
-
-    this.snake = new Snake
+    this.snake = new Snake()
 
     for (let i = 0; i < this.size; i++) {
       const row = []
@@ -103,21 +102,24 @@ class Game {
     if (!this.food) {
       this.food = [this._rd(0, this.size - 1), this._rd(0, this.size - 1)]
       for (let k = 0, len = this.snake.body.length; k < len; k += 2) {
-        if (this.snake.body[k + 1] === this.food[1]
-          && this.snake.body[k] === this.food[0]) {
+        if (
+          this.snake.body[k + 1] === this.food[1] &&
+          this.snake.body[k] === this.food[0]
+        ) {
           this.food = null
           this.makeFood()
           break
         }
-
       }
     }
   }
 
   eat() {
     for (let k = 0, len = this.snake.body.length; k < len; k += 2) {
-      if (this.snake.body[k + 1] === this.food[1]
-        && this.snake.body[k] === this.food[0]) {
+      if (
+        this.snake.body[k + 1] === this.food[1] &&
+        this.snake.body[k] === this.food[0]
+      ) {
         this.food = null
         return true
       }

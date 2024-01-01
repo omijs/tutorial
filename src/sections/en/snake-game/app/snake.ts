@@ -31,20 +31,16 @@ class Snake {
   }
 
   turnUp() {
-    if (this.dir !== 'down')
-      this.dir = 'up'
+    if (this.dir !== 'down') this.dir = 'up'
   }
   turnRight() {
-    if (this.dir !== 'left')
-      this.dir = 'right'
+    if (this.dir !== 'left') this.dir = 'right'
   }
   turnDown() {
-    if (this.dir !== 'up')
-      this.dir = 'down'
+    if (this.dir !== 'up') this.dir = 'down'
   }
   turnLeft() {
-    if (this.dir !== 'right')
-      this.dir = 'left'
+    if (this.dir !== 'right') this.dir = 'left'
   }
 }
 

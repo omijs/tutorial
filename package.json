@@ -5,10 +5,12 @@
     "build": "tsc && vite build --base=./ && npm run cp-libs && npm run cp-sections",
     "serve": "vite preview",
     "cp-libs": "cp -r ./libs  ./dist/libs",
-    "cp-sections": "cp -r ./src/sections  ./dist/sections"
+    "cp-sections": "cp -r ./src/sections  ./dist/sections",
+    "p": "prettier --write \"src/**/*.{ts,tsx,less,scss,css,js,json,html}\""
   },
   "devDependencies": {
     "less": "^4.1.1",
+    "prettier": "3.1.1",
     "sass": "^1.37.5",
     "typescript": "^4.3.2",
     "vite": "^2.9.14"
@@ -27,11 +29,11 @@
     "markdown-it": "^13.0.1",
     "markdown-it-anchor": "^8.6.4",
     "omi": "^7.3.5",
-    "rspa": "^0.0.1",
     "omi-transition": "^0.0.2",
     "omi-twind": "^0.0.2",
     "prismjs": "^1.28.0",
     "rollup": "^2.77.0",
+    "rspa": "^0.0.1",
     "typescript": "^4.6.4"
   }
 }

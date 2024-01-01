@@ -10,5 +10,5 @@
   './a.css': 'h1{color: red}'
   */
 export const files = {
-  './index': ''
+  './index': '',
 }
