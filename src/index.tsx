@@ -4,9 +4,10 @@ import logo from './assets/logo.svg'
 import { tw, sheet } from 'omi-twind'
 import './components/markdown-docs'
 // import { EditorState, EditorStateConfig, Compartment, Extension, StateEffect } from '@codemirror/state'
-import { EditorView, basicSetup } from "codemirror"
-import { javascript } from "@codemirror/lang-javascript"
-// import { css } from "@codemirror/lang-css"
+import { EditorState } from "@codemirror/state"
+import { EditorView, basicSetup } from 'codemirror'
+import { javascript } from '@codemirror/lang-javascript'
+import { css } from '@codemirror/lang-css'
 import { route } from 'rspa'
 // todo, 兼容 omi-next
 import { showLoading, hideLoading } from '@omiu/toast'
@@ -110,7 +111,7 @@ export default class extends Component {
       label: '🔗Router',
       target: '_blank',
       href: 'https://codesandbox.io/p/github/omijs/omi-router-example/main?file=%2Fsrc%2Froutes.tsx'
-    }, 
+    },
     // {
     //   id: 'transition',
     //   label: 'Transition',
@@ -253,6 +254,13 @@ export default class extends Component {
     })
   }
 
+  setCodeLang(lan) {
+    this.editor.setState(EditorState.create({
+      doc: this.editor.state.doc,
+      extensions: [basicSetup, lan === 'css' ? css() : javascript({ jsx: true, typescript: true })],
+    }));
+  }
+
   installed(): void {
     this.editor = new EditorView({
       extensions: [
@@ -299,6 +307,8 @@ export default class extends Component {
         insert: this.filesContent[evt.detail.tab.label]
       }
     })
+
+    this.setCodeLang(this.tabName.endsWith('.css') ? 'css' : 'tsx')
   }
 
 
