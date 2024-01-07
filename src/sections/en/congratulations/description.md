@@ -35,10 +35,10 @@ $ npm run build       # release
 ```
 
 
-### Create component
+### Create single page application
 
 ```bash
-$ npx omi-cli init-component my-component
+$ npx omi-cli init-spa my-app
 $ cd my-app           
 $ npm start           # develop
 $ npm run build       # release

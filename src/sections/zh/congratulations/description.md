@@ -34,10 +34,10 @@ $ npm run build       # release
 ```
 
 
-### 创建组件
+### 创建单页应用
 
 ```bash
-$ npx omi-cli init-component my-component
+$ npx omi-cli init-spa my-app
 $ cd my-app           
 $ npm start           # develop
 $ npm run build       # release
