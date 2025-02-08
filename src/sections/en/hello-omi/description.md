@@ -2,7 +2,7 @@
 
 Welcome to OMI tutorial!
 
-The goal of this tutorial is to let you quickly experience the use of Omi to develop **cross framework components** or build **entire applications**, using jxs/tsx you are familiar with.
+The goal of this tutorial is to let you quickly experience the use of Omi to develop **cross framework components** or build **entire applications**, using jsx/tsx you are familiar with.
 
 ## Preconditions
 
